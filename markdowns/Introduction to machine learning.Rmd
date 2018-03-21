@@ -2,29 +2,57 @@
 title: "Introduction to Machine Learning"
 author: "Louis Becker"
 date: "March 21, 2018"
-output: html_document
+output:
+  html_document:
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+This markdown is meant to complement the available slides, and will have the odd link here and there to some related material. 
 
-## R Markdown
+# 1. Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Resources:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+* [An Introduction to Statistica Learning](http://www-bcf.usc.edu/~gareth/ISL/)
+* [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
 
-```{r cars}
-summary(cars)
-```
+## Examples
+Links to some stuff mentioned:
 
-## Including Plots
+* [FiveThirtyEight](http://fivethirtyeight.com/)
+* [Watson](https://www.ibm.com/watson/)
 
-You can also embed plots, for example:
+Examples of statistical learning problems:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+* Identify the risk factors for prostate cancer.
+* Classify a recorded phoneme based on a log-periodogram.
+* Predict whether someone will have a heart attack on the basis of demographic, diet and clinical measurements.
+* Customize an email spam detection system.
+* Identify the numbers in a handwritten zip code.
+* Classify a tissue sample into one of several cancer classes, based on a gene expression profile.
+* Establish the relationship between salary and demographic variables in population survey data.
+* Classify the pixels in a LANDSAT image, by usage.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## The Supervised Learning Problem
+
+Where do we start? With definitions, obviously:
+
+* *Y* - Outcome variable (dependent variable, response variable, target variabel, etc.)
+* ***X*** - vector of *p* predictor measurements (inputs, regressors, covariates, features, independent variables)
+* *Regression Problem* - Problem where *Y* is defeined as a **quantitative** variable
+* *Classification Problem* - where *Y* is defined as a **qualitative** or **indicator** variable, taking values in a finite, unordered set
+* *Training Data* - Observations *(x~1~,y~1~),...,(x~N~,y~N~)* that are measurements.
+* The objecticve of supervised learning is to use training data for
+    + Predicting unseen test cases
+    + Understanding which inputs affect the outcome and how
+    + Assess the quality of predictions and inferences
+
+## So what is unsupervised learning, then?
+* No outcome variable, just a set of predictors (features) measured on a set of samples.
+* The bjective is more fuzzy: 
+    + Find groups of samples that behave similarly 
+    + Find features that behave similarly 
+    + Find linear combinations of features with the most variation
+* It is difficult to know how well you're doing
+* It is different from supervised learning, but can be useful as a pre-processing step for supervised learning
+
+# 2. Statistical Learning

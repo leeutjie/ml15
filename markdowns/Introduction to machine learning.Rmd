@@ -2,9 +2,10 @@
 title: "Introduction to Machine Learning"
 author: "Louis Becker"
 date: "March 21, 2018"
-output:
-  html_document:
+output: html_document
 ---
+
+
 
 This markdown is meant to complement the available slides, and will have the odd link here and there to some related material. 
 
@@ -12,7 +13,8 @@ This markdown is meant to complement the available slides, and will have the odd
 
 Resources:
 
-* [An Introduction to Statistica Learning](http://www-bcf.usc.edu/~gareth/ISL/)
+* [R-bloggers Course](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)
+* [An Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/)
 * [The Elements of Statistical Learning](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
 
 ## Examples
@@ -56,3 +58,21 @@ Where do we start? With definitions, obviously:
 * It is different from supervised learning, but can be useful as a pre-processing step for supervised learning
 
 # 2. Statistical Learning
+
+
+
+$\left(\begin{array}{c}
+2\\
+6
+\end{array}\right)$
+
+
+
+
+
+
+
+
+
+
+

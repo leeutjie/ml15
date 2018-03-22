@@ -50,7 +50,7 @@ Where do we start? With definitions, obviously:
 
 ## So what is unsupervised learning, then?
 * No outcome variable, just a set of predictors (features) measured on a set of samples.
-* The bjective is more fuzzy: 
+* The objective is more fuzzy: 
     + Find groups of samples that behave similarly 
     + Find features that behave similarly 
     + Find linear combinations of features with the most variation
@@ -59,7 +59,7 @@ Where do we start? With definitions, obviously:
 
 # 2. Statistical Learning
 
-# Sales prediction example
+## Sales prediction example
 
 *Sales* is considered the response variable, *Y*. *TV*, *Radio* and *Newspaper* each correspond to an *X_n* in the input vector **X**: 
 
@@ -69,8 +69,10 @@ X_2=Radio\\
 X_3=Newspaper
 \end{array}\right)$$
 
+We state our model such that our outcome is a function of inputs with some stochastic component, $\epsilom$, that captures errors and other discrepancies:
 
-
+$$Y = f(X) + \epsilon$$
+If our function, $f$, is good enough, we can make predictions of $Y$ given specific values of the predictors (where $X=x$)
 
 
 

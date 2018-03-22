@@ -59,13 +59,15 @@ Where do we start? With definitions, obviously:
 
 # 2. Statistical Learning
 
+# Sales prediction example
 
+*Sales* is considered the response variable, *Y*. *TV*, *Radio* and *Newspaper* each correspond to an *X_n* in the input vector **X**: 
 
-$\left(\begin{array}{c}
-2\\
-6
-\end{array}\right)$
-
+$$\left(\begin{array}{l}
+X_1=TV\\
+X_2=Radio\\
+X_3=Newspaper
+\end{array}\right)$$
 
 
 

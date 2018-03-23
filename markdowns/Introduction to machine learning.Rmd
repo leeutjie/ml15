@@ -7,7 +7,7 @@ output: html_document
 
 
 
-This markdown is meant to complement the available slides, and will have the odd link here and there to some related material. 
+This markdown is meant to complement the available slides, and will have the odd link here and there to some related material. The purpose is not to delve into theoretical detail here, but to state the bare minimum for reference.
 
 # 1. Introduction
 
@@ -59,21 +59,32 @@ Where do we start? With definitions, obviously:
 
 # 2. Statistical Learning
 
-## Sales prediction example
 
-*Sales* is considered the response variable, *Y*. *TV*, *Radio* and *Newspaper* each correspond to an *X_n* in the input vector **X**: 
+We state our model such that our outcome $Y$ is a function of inputs $X$ with some stochastic component $\epsilon$ that captures errors and other discrepancies:
 
-$$\left(\begin{array}{l}
-X_1=TV\\
-X_2=Radio\\
-X_3=Newspaper
-\end{array}\right)$$
+$$
+Y = f(X) + \epsilon
+$$
 
-We state our model such that our outcome is a function of inputs with some stochastic component, $\epsilom$, that captures errors and other discrepancies:
+If our function, $f$, is good enough, we can make predictions of $Y$ given specific values of the predictors (where $X=x$). The question can then be asked as to what is a good value for $f(X)$ for any value assigned to $X$? It is likely in any data that there will be multiple $Y$ outcomes for a particular value of $X$. A good approximation of $Y$ would then be its conditional expectation:
 
-$$Y = f(X) + \epsilon$$
-If our function, $f$, is good enough, we can make predictions of $Y$ given specific values of the predictors (where $X=x$)
+$$
+Y = f(X) = E(Y|X = x)
+$$
+This is commonly known as a regression function. A regression function can also be defined for a vector *$X$*:
 
+$$
+f(x) = f(x_1, x_2, x_3) = E(Y|X_1 = x_1, X_2 = x_2, X_3 = x_3)
+$$
+
+We define the *optimal* predictor of $Y$ as the function, $f(x) = E(Y|X=x)$, that minimises the mean squared prediction error
+$$
+E[(Y-d(X))^2|X=x]
+$$
+over all functions $g$ for all $X=x$. Now, let's turn our attention to the error, $\epsilon$. This component can be split into two types of error for any estimate $\hat{f}(x)$ of $f(x)$, namely the reducible error and the non-reducible error:
+$$
+E[(Y-d(X))^2|X=x] = [] + Var(\epsilon)
+$$
 
 
 

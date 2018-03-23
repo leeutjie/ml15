@@ -126,7 +126,7 @@ $(document).ready(function () {
 </div>
 
 
-<p>This markdown is meant to complement the available slides, and will have the odd link here and there to some related material.</p>
+<p>This markdown is meant to complement the available slides, and will have the odd link here and there to some related material. The purpose is not to delve into theoretical detail here, but to state the bare minimum for reference.</p>
 <div id="introduction" class="section level1">
 <h1>1. Introduction</h1>
 <p>Resources:</p>
@@ -175,7 +175,7 @@ $(document).ready(function () {
 <h2>So what is unsupervised learning, then?</h2>
 <ul>
 <li>No outcome variable, just a set of predictors (features) measured on a set of samples.</li>
-<li>The bjective is more fuzzy:
+<li>The objective is more fuzzy:
 <ul>
 <li>Find groups of samples that behave similarly</li>
 <li>Find features that behave similarly</li>
@@ -188,17 +188,20 @@ $(document).ready(function () {
 </div>
 <div id="statistical-learning" class="section level1">
 <h1>2. Statistical Learning</h1>
-<div id="sales-prediction-example" class="section level2">
-<h2>Sales prediction example</h2>
-<p><em>Sales</em> is considered the response variable, <em>Y</em>. <em>TV</em>, <em>Radio</em> and <em>Newspaper</em> each correspond to an <em>X_n</em> in the input vector <strong>X</strong>:</p>
-<p><span class="math display">\[\left(\begin{array}{l}
-X_1=TV\\
-X_2=Radio\\
-X_3=Newspaper
-\end{array}\right)\]</span></p>
-<p>We state our model such that our outcome is a function of inputs with some stochastic component, <span class="math inline">\(\epsilom\)</span>, that captures errors and other discrepancies:</p>
-<p><span class="math display">\[Y = f(X) + \epsilon\]</span> If our function, <span class="math inline">\(f\)</span>, is good enough, we can make predictions of <span class="math inline">\(Y\)</span> given specific values of the predictors (where <span class="math inline">\(X=x\)</span>)</p>
-</div>
+<p>We state our model such that our outcome <span class="math inline">\(Y\)</span> is a function of inputs <span class="math inline">\(X\)</span> with some stochastic component <span class="math inline">\(\epsilon\)</span> that captures errors and other discrepancies:</p>
+<p><span class="math display">\[
+Y = f(X) + \epsilon
+\]</span></p>
+<p>If our function, <span class="math inline">\(f\)</span>, is good enough, we can make predictions of <span class="math inline">\(Y\)</span> given specific values of the predictors (where <span class="math inline">\(X=x\)</span>). The question can then be asked as to what is a good value for <span class="math inline">\(f(X)\)</span> for any value assigned to <span class="math inline">\(X\)</span>? It is likely in any data that there will be multiple <span class="math inline">\(Y\)</span> outcomes for a particular value of <span class="math inline">\(X\)</span>. A good approximation of <span class="math inline">\(Y\)</span> would then be its conditional expectation:</p>
+<p><span class="math display">\[
+Y = f(X) = E(Y|X = x)
+\]</span> This is commonly known as a regression function. A regression function can also be defined for a vector <em><span class="math inline">\(X\)</span></em>:</p>
+<p><span class="math display">\[
+f(x) = f(x_1, x_2, x_3) = E(Y|X_1 = x_1, X_2 = x_2, X_3 = x_3)
+\]</span></p>
+<p>We define the <em>optimal</em> predictor of <span class="math inline">\(Y\)</span> as the function, <span class="math inline">\(f(x) = E(Y|X=x)\)</span>, that minimises the mean squared prediction error <span class="math display">\[
+E[(Y-d(X))^2|X=x]
+\]</span> over all functions <span class="math inline">\(g\)</span> for all <span class="math inline">\(X=x\)</span>. Now, let’s turn our attention to <span class="math inline">\(\epsilon\)</span>.</p>
 </div>
 
 
